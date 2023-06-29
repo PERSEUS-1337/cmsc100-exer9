@@ -69,7 +69,7 @@ export default function LoginPage() {
                         { 
                             required: "This is required", 
                             pattern: {
-                                value: /^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/,
+                                value: /.+@.+\..+/,
                                 message:"The email format is incorrect"
                             },
                             minLength: {
@@ -95,7 +95,7 @@ export default function LoginPage() {
                                     { 
                                         required: "This is required", 
                                         pattern: {
-                                            value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
+                                            value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/,
                                             message:"*Must be at least 8 characters, 1 number, 1  lowercase letter, and 1 uppercase letter"
                                         },
                                         minLength: {
